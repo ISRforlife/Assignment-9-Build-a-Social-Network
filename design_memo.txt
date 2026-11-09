@@ -1,0 +1,11 @@
+Social Network Graph - Design Memo
+
+For this assignment, I used a graph to build a simple social network where people can connect through friendships. A graph makes sense because each person can have multiple friends, and those friendships can connect people in different ways. There is no single starting point or strict order that everyone has to follow.
+
+I used an adjacency list, where every Person object keeps a list of their friends. The SocialNetwork class also uses a dictionary to store people by name. This makes it easy to find someone before creating a friendship. When I add a friendship, I update both people's lists because the connection should go both ways.
+
+A regular list would be fine for keeping track of names, but it would not represent all the relationships as clearly. A tree would also be limiting because it is built around parent-child connections. In a real social network, friends can connect in circles, and one person can have many different connections.
+
+One trade-off I noticed is that adding a friend requires checking the existing friends list to avoid duplicates. That check can take longer when someone has a lot of friends. Printing the whole network also takes more work as the number of people and friendships grows, because the program has to go through every person and their connections.
+
+Overall, this project helped me see why graphs are a better choice when the relationships between objects matter as much as the objects themselves.
